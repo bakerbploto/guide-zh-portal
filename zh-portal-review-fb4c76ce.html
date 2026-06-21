@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jrs 信息索引 · 资料整理说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f0e8;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2e2b26;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 840px;
+            margin: 0 auto;
+            background: #fdfcfa;
+            border-radius: 16px;
+            padding: 3rem 2.5rem 3.5rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 6px solid #b7a48b;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            color: #3a342c;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: #6e6558;
+            margin-top: -0.8rem;
+            margin-bottom: 2.4rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e5ddd2;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 500;
+            margin: 2rem 0 0.8rem;
+            color: #3f392f;
+            border-bottom: 1px dashed #d9cfc0;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin: 0.9rem 0;
+            text-align: justify;
+        }
+
+        .quote-block {
+            background: #f1ebe3;
+            padding: 1.2rem 1.8rem;
+            border-radius: 12px;
+            border-left: 5px solid #b7a48b;
+            margin: 1.6rem 0;
+            font-size: 0.98rem;
+            color: #3f372e;
+        }
+
+        .highlight-box {
+            background: #faf6ef;
+            border: 1px solid #ddd3c6;
+            border-radius: 14px;
+            padding: 1.4rem 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.35rem 0 0.35rem 1.6rem;
+            position: relative;
+        }
+
+        .highlight-box li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #8d7c67;
+            font-weight: bold;
+        }
+
+        .use-scenario {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        .scenario-item {
+            flex: 1 1 180px;
+            background: #f4eee6;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e2d8cc;
+        }
+
+        .scenario-item strong {
+            display: block;
+            font-weight: 600;
+            color: #4f463b;
+            margin-bottom: 0.3rem;
+        }
+
+        .scenario-item span {
+            font-size: 0.92rem;
+            color: #5f5548;
+        }
+
+        .inline-link {
+            color: #6f5c48;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #cbbaa8;
+            font-weight: 500;
+        }
+
+        .inline-link:hover {
+            color: #3f3225;
+            text-decoration-color: #8f7b64;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 0.8rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #ece4d9;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #4f463b;
+        }
+
+        .faq-a {
+            color: #555048;
+            margin-top: 0.2rem;
+        }
+
+        .footnote {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            font-size: 0.88rem;
+            color: #7a6f60;
+            border-top: 1px solid #e3d9cd;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+                border-left-width: 4px;
+            }
+            .use-scenario {
+                flex-direction: column;
+            }
+            .scenario-item {
+                flex: 1 1 auto;
+            }
+            .quote-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>jrs · 资料整理与信息索引</h1>
+    <div class="hero-sub">基于长期阅读与归类，搭建的内容梳理节点</div>
+
+    <p>
+        日常信息流中，经常需要一处能稳定回溯的整理空间。<strong>jrs</strong> 定位为一个轻量级的信息索引站点，侧重对公开资料、常见疑问与相关背景的收敛与呈现。页面所聚合的内容，均经过基础筛选与归类，尽可能减少冗余，保留有参考价值的条目。
+    </p>
+
+    <div class="quote-block">
+        “信息整理不是搬运，而是为后续查找提供一个可依赖的坐标。” —— 站点笔记
+    </div>
+
+    <h2>整理的几个特点</h2>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>分类叙述</strong> — 每个模块围绕一个主题展开，避免混杂。同类内容集中罗列，方便横向比较。</li>
+            <li><strong>低噪点排版</strong> — 不添加无关动态元素或频繁弹窗，阅读节奏由内容本身决定。</li>
+            <li><strong>持续补正</strong> — 若发现条目过时或描述有偏差，会基于可靠来源进行修订，并记录调整时间。</li>
+            <li><strong>中立视角</strong> — 只陈列已知信息与相对通行的解释，不代入主观立场或倾向性判断。</li>
+        </ul>
+    </div>
+
+    <h2>适用场景举例</h2>
+    <div class="use-scenario">
+        <div class="scenario-item">
+            <strong>背景查阅</strong>
+            <span>需要快速了解某个概念的常见释义、关联条目或基本脉络时，可作为出发节点。</span>
+        </div>
+        <div class="scenario-item">
+            <strong>资料对照</strong>
+            <span>手头有多份来源，希望对比核心说法或数据时，可借助索引列表进行交叉验证。</span>
+        </div>
+        <div class="scenario-item">
+            <strong>主题扩展</strong>
+            <span>从某一关键词出发，顺着条目间的引用关系，可以发现更多相关材料。</span>
+        </div>
+    </div>
+
+    <h2>使用建议与边界</h2>
+    <p>
+        整理索引无法替代原始文献或一手公告，建议将本站内容视为线索而非结论。若需要精确数据或最新政策，应优先查阅官方发布渠道。另外，索引中所涉及的第三方链接或表述，仅作引用之用，不代表对其全部内容的背书。
+    </p>
+    <p>
+        实际浏览中，可以尝试用关键词组合在 <a href="https://zh-portal-jrs.com" class="inline-link">jrs</a> 中定位相关模块；如果暂时没有找到期望的条目，可能意味着该方向尚未被收录，或正在修订中。
+    </p>
+
+    <div class="faq-mini">
+        <h2>FAQ · 常见疑问简答</h2>
+        <div class="faq-item">
+            <div class="faq-q">问：这里的资料会频繁更新吗？</div>
+            <div class="faq-a">答：更新节奏不固定，但每次调整都会注明日期与变更范围。核心条目会保持相对稳定，延伸内容视材料积累情况逐步补充。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：页面上的信息是否经过审核？</div>
+            <div class="faq-a">答：所有内容均经过基础事实核对与逻辑梳理，但受限于整理者视野，可能存在疏漏。如有明显错误，欢迎通过站点提供的联系方式反馈。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：是否可以转载或引用这里的文本？</div>
+            <div class="faq-a">答：引用少量内容用于非商业目的时，注明出处即可。大量转载或商用前建议先沟通确认。</div>
+        </div>
+    </div>
+
+    <div class="footnote">
+        本页为索引介绍说明 · 内容组织方向：资料整理与信息索引
+    </div>
+</div>
+</body>
+</html>
